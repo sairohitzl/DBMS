@@ -1,0 +1,10 @@
+Owner(ownId,ownName,ownPhone)
+Property(propId,bldgName,UnitNo,Bdrms)
+
+Shares(ownId,propId,startWeek,endWeek)
+foreign key(ownID) references Owner
+foreign key(propID) references Property
+
+Conversion rules::
+	use the entity type rule to convert each entity type
+	use m-n rule to convert the shares relationship

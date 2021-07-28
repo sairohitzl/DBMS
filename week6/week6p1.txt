@@ -1,0 +1,10 @@
+Student(stdNo,stdName,stdAddress,stdCity,stdState,stdZip,stdEmail)
+Lender(lenderNo,LenderName)
+Institution(instId,instName,instMascot)
+Loan(loanNo,procDate,disbMethod,disbBank,dateAuth,noteValue,subsidized,rate)
+DisburseLine(dateSent,amount,origFee,guarFee)
+
+
+conversion rule::
+	--use entity type rule to convert each entity type to table.
+

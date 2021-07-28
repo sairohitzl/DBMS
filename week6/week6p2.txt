@@ -1,0 +1,20 @@
+Student(stdNo,stdName,stdAddress,stdCity,stdState,stdZip,stdEmail)
+Lender(lenderNo,LenderName)
+Institution(instId,instName,instMascot)
+
+Loan(loanNo,stdNo,instId,lenderNo,procDate,disbMethod,disbBank,dateAuth,noteValue,subsidized,rate)
+     foreign key stdNo references Student
+     foreign key instId references Institution
+     foreign key lenderNo references Lender
+     stdNo not null
+     instId not null
+     lenderNo not null
+     
+DisburseLine(loanNo,dateSent,amount,origFee,guarFee)
+	foreign key loanNo references Loan
+	
+	
+
+conversion rules::
+	--use entity type rules to convert entity types
+	--use 1-m relationship rules
